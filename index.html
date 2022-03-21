@@ -1,43 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Photo parametrization software</div>
+                <div class="masthead-heading text-uppercase">FotoFaces</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+            </div>
+        </header>
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Features</h2>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-regular fa-smile-beam fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">FotoFaces</h4>
+                        <p class="text-muted font-weight-light mb-0">Backend that can be incorporated into different business logic.</br>Capable of providing a good analysis of a set of parameters according to a given photo</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Mobile Application</h4>
+                        <p class="text-muted font-weight-light mb-0">A Mobile Application written in React, both available to IOS and Android and easily ported to a similar WebSite.</br>React is a good plataform since it does not compromise performance</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-brain fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Modular</h4>
+                        <p class="text-muted font-weight-light mb-0">Provides an easy way to adapt to new rules imposed by clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About the Project</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/context.png" alt="Context" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Context</div>
+                                <!--<div class="portfolio-caption-subheading text-muted"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item text-center">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/frustration.png" alt="Problem" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Problem</div>
+                                <!--<div class="portfolio-caption-subheading text-muted"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item text-center">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                  <img class="img-fluid float-center" src="assets/img/success.png" alt="Goal" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Goals</div>
+                                <!--<div class="portfolio-caption-subheading text-muted">Identity</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item text-center">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/risco.png" alt="Problem" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Risks</div>
+                                <!--<div class="portfolio-caption-subheading text-muted">Identity</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item text-center">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/expected.png" alt="Expected Results" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Expected Results</div>
+                                <!--<div class="portfolio-caption-subheading text-muted">Identity</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item text-center">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/networking.png" alt="Related Work" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Related Work</div>
+                                <!--<div class="portfolio-c aption-subheading text-muted">Identity</div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <!-- Team-->
+        <section class="testimonials text-center bg-light" id="team">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <h2 class="mb-5">Team</h2>
+                    <div class="col-lg-2">
+                      <div class="testimonial-item mx-auto mb-5 mb-lg-0 text-center">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/flips.jpg" alt="..." />
+                            <h5>Filipe Gonçalves</h5>
+                            <p class="font-weight-light mb-0">"Team Manager and Communication Leader"</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <div class="testimonial-item mx-auto mb-5 mb-lg-0 text-center">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/Foto_CC.jpg" alt="..." />
+                            <h5>Goncalo Machado</h5>
+                            <p class="font-weight-light mb-0">"DevOps and Backend"</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <div class="testimonial-item mx-auto mb-5 mb-lg-0 text-center">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/image.png" alt="..." />
+                            <h5>Joao Saraiva</h5>
+                            <p class="font-weight-light mb-0">"Lead Developer and FrontEnd Developer"</p>
+                        </div>
+                    </div>
+                  <div class="col-lg-2 ">
+                      <div class="testimonial-item mx-auto mb-5 mb-lg-0 text-center">
+                          <img class="img-fluid rounded-circle mb-3" src="assets/img/vicente.png" alt="..." />
+                          <h5>Vicente Costa</h5>
+                          <p class="font-weight-light mb-0">"Architect and Infrastucture Engineer"</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-2">
+                      <div class="testimonial-item mx-auto mb-5 mb-lg-0 text-center">
+                          <img class="img-fluid rounded-circle mb-3" src="assets/img/IMG_20220318_172734.jpg" alt="..." />
+                          <h5>Pedro Lopes</h5>
+                          <p class="font-weight-light mb-0">"Quality Manager and Backend"</p>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="container mt-5">
+                    <div class="row d-flex justify-content-center">
+                      <h2 class="mb-5">Advisors</h2>
+                        <div class="col-lg-2">
+                            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="assets/img/neves.jpg" alt="..." />
+                                <h5>Antonio Neves</h5>
+                                <p class="font-weight-light mb-0">"Professor"</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="assets/img/canedo2.jpeg" alt="..." />
+                                <h5>Daniel Canedo</h5>
+                                <p class="font-weight-light mb-0">"Professor"</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="assets/img/vieira.jpeg" alt="..." />
+                                <h5>Jose Vieira</h5>
+                                <p class="font-weight-light mb-0">"Professor"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; FotoFaces 2021</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade " id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Context</h2>
+                                    <p class="text-muted font-weight-light mb-5">Our project resides in identifying peoples on photos and adjusting those photos in order for them to have a high quality and an easy association between a person’s name and their face.We also strive to invalidate photos which do not respect some standards, for instance if the photo will be used on an identification card such as the citizen card we cannot let people wear glasses or use a hat, because that does not respect some laws, of course this must be an extra module because not every business model must be that strict.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Problem</h2>
+                                    <p class="text-muted font-weight-light mb-5" >Our project will consist of a mobile application that sends a photo to an API which will respond with characteristics of that photo (Ex.: Has a face, has glasses…) and, according to the response message, the mobile app will check if it’s valid and update it to the database.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase mb-5">Goals</h2>
+                                    <ul class="text-muted font-weight-light mb-5 list-style-type:circle text-start mt-2 mx-auto">
+                                        <li>
+                                          Facial Recognition functionalities
+                                        </li>
+                                        <li>
+                                          Improve existing algorithms in FotoFaces
+                                        </li>
+                                        <li>
+                                          Add algorithms to FotoFaces to improve the reliability of the Facial Recognition
+                                        </li>
+                                        <li>
+                                          Implement deep learning to make the FotoFaces algorithms more reliable
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase mb-5">Project Name</h2>
+                                    <ul class="text-muted font-weight-light mb-5 list-style-type:circle text-start mt-2 mx-auto">
+                                        <li>
+                                                Modularization Problems
+                                        </li>
+                                        <li>
+                                                Performance and Efficiency of the algorithms
+                                        </li>
+                                        <li>
+                                                Bad implementation of deep learning
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase mb-5">Expected Results</h2>
+                                    <ul class="text-muted font-weight-light mb-5 list-style-type:circle text-start mx-auto mt-3">
+                                        <li>
+                                              Fully functional mobile app with FotoFaces integration
+                                        </li>
+                                        <li>
+                                              Reliable Facial Recognition
+                                        </li>
+                                        <li>
+                                              Robust backend capable of scaling
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase mx-auto mb-5">Project Name</h2>
+                                    <ul class="text-muted font-weight-light mb-5 list-inline text-start mx-auto" >
+                                        <li>
+                                          <a class="link-primary" href="https://github.com/hamzasafdar01/Image-Blur-detection-and-image-quality-check-python">Blur detection and image quality check</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://www.pyimagesearch.com/2015/09/07/blur-detection-with-opencv/">Blur detection with OpenCV</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://github.com/WillBrennan/BlurDetection2">Blur detection</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= http://scikit-image.org/docs/dev/api/skimage.exposure.html">Python image processing library</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://github.com/AndreasMerentitis/detect-contrast-blurriness">Blur and contrast detection</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://github.com/TianxingWu/realtime-glasses-detection">Realtime glasses detector</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/">Liveness detection</a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>
