@@ -600,8 +600,8 @@ progress {
 }
 
 .img-fluid {
-  height: auto;
   width: 40%;
+  height: auto;
 }
 
 .img-thumbnail {
