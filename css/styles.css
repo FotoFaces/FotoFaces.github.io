@@ -600,6 +600,11 @@ progress {
 }
 
 .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-context {
   width: 40%;
   height: auto;
 }
