@@ -605,7 +605,8 @@ progress {
 }
 
 .img-context {
-  width: 40%;
+  max-width: 40%;
+  height: auto;
 }
 
 .img-thumbnail {
