@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="masthead-subheading">Photo parametrization software</div>
                 <div class="masthead-heading text-uppercase">FotoFaces</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#features">Tell Me More</a>
+                <a class="btn btn-secondary btn-xl text-uppercase" href="#features">Tell Me More</a>
             </div>
         </header>
         <section class="page-section" id="features">
@@ -52,7 +52,7 @@
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-circle fa-stack-2x text-secondary"></i>
                             <i class="fas fa-regular fa-smile-beam fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">FotoFaces</h4>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-circle fa-stack-2x text-secondary"></i>
                             <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Mobile Application</h4>
@@ -68,7 +68,7 @@
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-circle fa-stack-2x text-secondary"></i>
                             <i class="fas fa-brain fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Modular</h4>
@@ -258,32 +258,38 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <a class="doc-link" data-bs-toggle="modal" href="#doc-app">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
+                        <button class="btn-app" onclick="Documentation(event, 'doc-app')">
+                            <a class="doc-link">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fas fa-circle fa-stack-2x text-secondary" id="tablinks1"></i>
+                                    <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </button>
                         <h4 class="my-3">Mobile Application</h4>
                         <p class="text-muted font-weight-light mb-0">Some Documentation for the Mobile App needed</p>
                     </div>
                     <div class="col-md-4">
-                        <a class="doc-link" data-bs-toggle="modal" href="#doc-gen">
+                        <button class="btn-app" onclick="Documentation(event, 'doc-gen')">
+                        <a class="doc-link">
                             <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-bars fa-inverse fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x text-secondary" id="tablinks2"></i>
+                                <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
+                        </button>
                         <h4 class="my-3">General</h4>
                         <p class="text-muted font-weight-light mb-0">General Documentation like diagrams, tasks and roles</p>
                     </div>
                     <div class="col-md-4">
-                        <a class="doc-link" data-bs-toggle="modal" href="#doc-fot">
+                        <button class="btn-app" onclick="Documentation(event, 'doc-fot')">
+                        <a class="doc-link">
                             <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-circle fa-stack-2x text-secondary" id="tablinks3"></i>
                                 <i class="fas fa-camera-retro fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
+                        </button>
                         <h4 class="my-3">FotoFaces</h4>
                         <p class="text-muted font-weight-light mb-0">Some Documentation for the FotoFaces API and algorithms</p>
                     </div>
@@ -293,157 +299,99 @@
 
         <!-- Documentation Modals-->
         <!-- Mobile App-->
-        <div class="portfolio-modal modal fade" id="doc-app" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <!-- Introduction-->
-                                    <h2 class="text-uppercase">Mobile Application</h2>
-                                    <p class="text-muted font-weight-light mb-5">Some text about mobile app</p>
-
-                                    <!-- Body-->
-                                    <h3 class="text-uppercase">Functional Requirements</h2>
-                                    <ul class="text-muted font-weight-light mb-5">
-                                        <li>The system must allow the user login with username and password (if possible, integration with idp.ua)</li>
-                                        <li>The system must allow the user check my current photo (by clicking on the "profile" button)</li>
-                                        <li>The system must allow the user to check the properties that a photo needs to have to be valid</li>
-                                        <li>The system must allow the user to pick between taking a photo and picking a photo from the gallery</li>
-                                        <li>The system must allow the user to take a photo in real time</li>
-                                        <li>The system must allow the user to choose a photo from the gallery</li>
-                                        <li>The system must send a photo and the user ID to the FotoFaces API (not sure if the API part is needed or should be changed/removed)</li>
-                                        <li>The system must receive a JSON from the FotoFaces API with the properties of the sent photo</li>
-                                        <li>The system must check the validity of a photo based on it's properties</li>
-                                        <li>The system must show the user if the chosen photo is valid</li>
-                                        <li>The system must allow the user to choose between sending a valid photo for updating his photo, going back to the menu where the user can choose another photo or return to the</li>
-                                    </ul>
-
-                                    <!-- Close Button-->
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="tabcontent container" id="doc-app">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <!-- Project details-->
+                    <!-- Body-->
+                    <h3 class="text-uppercase">Functional Requirements</h2>
+                    <ul class="text-muted font-weight-light mb-5">
+                        <li>The system must allow the user login with username and password (if possible, integration with idp.ua)</li>
+                        <li>The system must allow the user check my current photo (by clicking on the "profile" button)</li>
+                        <li>The system must allow the user to check the properties that a photo needs to have to be valid</li>
+                        <li>The system must allow the user to pick between taking a photo and picking a photo from the gallery</li>
+                        <li>The system must allow the user to take a photo in real time</li>
+                        <li>The system must allow the user to choose a photo from the gallery</li>
+                        <li>The system must send a photo and the user ID to the FotoFaces API (not sure if the API part is needed or should be changed/removed)</li>
+                        <li>The system must receive a JSON from the FotoFaces API with the properties of the sent photo</li>
+                        <li>The system must check the validity of a photo based on it's properties</li>
+                        <li>The system must show the user if the chosen photo is valid</li>
+                        <li>The system must allow the user to choose between sending a valid photo for updating his photo, going back to the menu where the user can choose another photo or return to the</li>
+                    </ul>
                 </div>
             </div>
         </div>
         <!-- General App-->
-        <div class="portfolio-modal modal fade" id="doc-gen" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <!-- Introduction-->
-                                    <h2 class="text-uppercase">General Documentation</h2>
-                                    <p class="text-muted font-weight-light mb-5">Some text about general settings</p>
+        <div class="tabcontent container" id="doc-gen">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <!-- Project details-->
+                    <!-- Body-->
+                    <h3 class="text-uppercase">Commuincation Plan</h2>
+                    <ul class="text-muted font-weight-light mb-5">
+                        <li>Discord for team discussion and communication</li>
+                        <li>Outlook and Slack for advisor-team discussion relationship</li>
+                        <li>GitHub Project for backlog management</li>
+                        <li>Promotional Website for organisation and advertisement</li>
+                    </ul>
 
-                                    <!-- Body-->
-                                    <h3 class="text-uppercase">Commuincation Plan</h2>
-                                    <ul class="text-muted font-weight-light mb-5">
-                                        <li>Discord for team discussion and communication</li>
-                                        <li>Outlook and Slack for advisor-team discussion relationship</li>
-                                        <li>GitHub Project for backlog management</li>
-                                        <li>Promotional Website for organisation and advertisement</li>
-                                    </ul>
+                    <h3 class="text-uppercase">Development Tools</h2>
+                    <ul class="text-muted font-weight-light mb-5">
+                        <li>GitHub for code repository</li>
+                        <li>React for website builder</li>
+                        <li>React Native for mobile app builder</li>
+                        <li>Discord and Slack for team communication</li>
+                    </ul>
 
-                                    <h3 class="text-uppercase">Development Tools</h2>
-                                    <ul class="text-muted font-weight-light mb-5">
-                                        <li>GitHub for code repository</li>
-                                        <li>React for website builder</li>
-                                        <li>React Native for mobile app builder</li>
-                                        <li>Discord and Slack for team communication</li>
-                                    </ul>
+                    <h3 class="text-uppercase">Project Calendar</h2>
 
-                                    <h3 class="text-uppercase">Project Calendar</h2>
+                    <h3 class="text-uppercase">Non-Functional Requirements</h2>
+                    <ul class="text-muted font-weight-light mb-5">
+                        <li>Scalability - When many users use the API at the same time</li>
+                        <li>Reliability - It shouldn’t crash all the time</li>
+                        <li>Availability - Always available to any user</li>
+                        <li>Maintainability - Maintain documentation and infrastructure</li>
+                        <li>Usability - Intuitive application</li>
+                    </ul>
 
-                                    <h3 class="text-uppercase">Non-Functional Requirements</h2>
-                                    <ul class="text-muted font-weight-light mb-5">
-                                        <li>Scalability - When many users use the API at the same time</li>
-                                        <li>Reliability - It shouldn’t crash all the time</li>
-                                        <li>Availability - Always available to any user</li>
-                                        <li>Maintainability - Maintain documentation and infrastructure</li>
-                                        <li>Usability - Intuitive application</li>
-                                    </ul>
+                    <h3 class="text-uppercase">Actors</h2>
 
-                                    <h3 class="text-uppercase">Actors</h2>
+                    <h3 class="text-uppercase">Use Cases</h2>
 
-                                    <h3 class="text-uppercase">Use Cases</h2>
+                    <h3 class="text-uppercase">Domain Model</h2>
 
-                                    <h3 class="text-uppercase">Domain Model</h2>
+                    <h3 class="text-uppercase">Deployment Diagram</h2>
 
-                                    <h3 class="text-uppercase">Deployment Diagram</h2>
-
-                                    <h3 class="text-uppercase">Mock-Ups</h2>
-
-
-                                    <!-- Close Button-->
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-uppercase">Mock-Ups</h2>
                 </div>
             </div>
         </div>
         <!-- FotoFaces App-->
-        <div class="portfolio-modal modal fade" id="doc-fot" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <!-- Introduction-->
-                                    <h2 class="text-uppercase">FotoFaces API and Algorithms</h2>
-                                    <p class="text-muted font-weight-light mb-5">Some text about fotofaces api</p>
+        <div class="tabcontent container" id="doc-fot">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <!-- Project details-->
+                    <!-- Body-->
+                    <h3 class="text-uppercase">Functional Requirements</h2>
+                    <ul class="text-muted font-weight-light mb-5">
+                        <li>The system must be able to receive a photo and an user ID</li>
+                        <li>The system must get the user old photo from the database</li>
+                        <li>The system must compare the old photo and new photo to check if it's the same person</li>
+                        <li>The system must detect a series of properties from the new photo</li>
+                        <li>The system must send the detected properties in a JSON format to the user</li>
+                        <li>The systen must allow for plugins to be added for detection of more properties</li>
+                    </ul>
 
-                                    <!-- Body-->
-                                    <h3 class="text-uppercase">Functional Requirements</h2>
-                                    <ul class="text-muted font-weight-light mb-5">
-                                        <li>The system must be able to receive a photo and an user ID</li>
-                                        <li>The system must get the user old photo from the database</li>
-                                        <li>The system must compare the old photo and new photo to check if it's the same person</li>
-                                        <li>The system must detect a series of properties from the new photo</li>
-                                        <li>The system must send the detected properties in a JSON format to the user</li>
-                                        <li>The systen must allow for plugins to be added for detection of more properties</li>
-                                    </ul>
-
-                                    <h3 class="text-uppercase">Algorithms</h2>
-                                    <ul class="text-muted font-weight-light mb-5">
-                                        <li>Facial Recognition</li>
-                                        <li>Fix face orientation</li>
-                                        <li>Analyse photo quality</li>
-                                        <li>Blur background</li>
-                                        <li>Recognize invalid objects, such as hats and sunglasses</li>
-                                        <li>Crop face accordingly</li>
-                                        <li>Implement deep learning</li>
-                                    </ul>
-
-                                    <!-- Close Button-->
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-uppercase">Algorithms</h2>
+                    <ul class="text-muted font-weight-light mb-5">
+                        <li>Facial Recognition</li>
+                        <li>Fix face orientation</li>
+                        <li>Analyse photo quality</li>
+                        <li>Blur background</li>
+                        <li>Recognize invalid objects, such as hats and sunglasses</li>
+                        <li>Crop face accordingly</li>
+                        <li>Implement deep learning</li>
+                    </ul>
                 </div>
             </div>
         </div>
