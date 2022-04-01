@@ -11805,3 +11805,8 @@ section#contact form#contactForm :-ms-input-placeholder {
   --bs-text-opacity: 1;
   color: rgba(255, 196, 0,1) !important;
 }
+
+.image-doc {
+  max-width: 90%;
+  height: auto;
+}

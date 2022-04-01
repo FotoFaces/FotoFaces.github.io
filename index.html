@@ -304,20 +304,30 @@
                 <div class="col-lg-12">
                     <!-- Project details-->
                     <!-- Body-->
-                    <h3 class="text-uppercase">Functional Requirements</h2>
+                    <h3 class="text-uppercase">Functional Requirements</h3>
                     <ul class="text-muted font-weight-light mb-5">
-                        <li>The system must allow the user login with username and password (if possible, integration with idp.ua)</li>
-                        <li>The system must allow the user check my current photo (by clicking on the "profile" button)</li>
-                        <li>The system must allow the user to check the properties that a photo needs to have to be valid</li>
-                        <li>The system must allow the user to pick between taking a photo and picking a photo from the gallery</li>
-                        <li>The system must allow the user to take a photo in real time</li>
-                        <li>The system must allow the user to choose a photo from the gallery</li>
-                        <li>The system must send a photo and the user ID to the FotoFaces API (not sure if the API part is needed or should be changed/removed)</li>
-                        <li>The system must receive a JSON from the FotoFaces API with the properties of the sent photo</li>
-                        <li>The system must check the validity of a photo based on it's properties</li>
+                        <li>The system must allow the user to login with username and password (or SSO)</li>
+                        <li>The system must allow the user to check his current photo</li>
+                        <li>The system must allow the user to check the properties needed for a photo to be valid</li>
+                        <li>The system must allow the user to pick between taking a live photo or choosing a photo from the gallery and do one of them</li>
+                        <li>The system must allow the user to choose between updating a valid photo, going back to the last menu or return to the main page</li>
+                        <li>The system must send a photo and the user ID to the FotoFaces API</li>
+                        <li>The system must receive a JSON from the FotoFaces API with the validation properties</li>
+                        <li>The system must check the validity of a photo (based on its properties)</li>
                         <li>The system must show the user if the chosen photo is valid</li>
-                        <li>The system must allow the user to choose between sending a valid photo for updating his photo, going back to the menu where the user can choose another photo or return to the</li>
                     </ul>
+
+                    <h3 class="text-uppercase">Development Tools</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 60%" src="assets/img/others/react_native.png" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    React Native
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -327,25 +337,81 @@
                 <div class="col-lg-12">
                     <!-- Project details-->
                     <!-- Body-->
-                    <h3 class="text-uppercase">Commuincation Plan</h2>
-                    <ul class="text-muted font-weight-light mb-5">
-                        <li>Discord for team discussion and communication</li>
-                        <li>Outlook and Slack for advisor-team discussion relationship</li>
-                        <li>GitHub Project for backlog management</li>
-                        <li>Promotional Website for organisation and advertisement</li>
-                    </ul>
+                    <h1 class="text-uppercase">Architecture</h1>
+                    <h3 class="text-uppercase">Simple Architecture</h3>
+                    <img class="image-doc" src="assets/img/diagrams/Simple_Architecture.png" alt="Simple Architecture" />
+                    <br><br>
 
-                    <h3 class="text-uppercase">Development Tools</h2>
-                    <ul class="text-muted font-weight-light mb-5">
-                        <li>GitHub for code repository</li>
-                        <li>React for website builder</li>
-                        <li>React Native for mobile app builder</li>
-                        <li>Discord and Slack for team communication</li>
-                    </ul>
+                    <br><br>
+                    <h1 class="text-uppercase">Inception Phase</h1>
+                    <h3 class="text-uppercase">Communication Plan</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 60%" src="assets/img/others/discord-mascot.png" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Team communication
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 57%" src="assets/img/others/slack.png" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Advisor-Team discussion
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 107%" src="assets/img/others/GitHub-Logo.png" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Project Bakclog management
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 60%" src="assets/img/others/website.png" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                   Promotional Website
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
 
-                    <h3 class="text-uppercase">Project Calendar</h2>
+                    <h3 class="text-uppercase">Development Tools</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 90%" src="assets/img/others/react_native.png" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Mobile App building
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 107%" src="assets/img/others/GitHub-Logo.png" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Code repository
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 60%" src="assets/img/others/react.webp" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                   Website building
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <img class="image-doc" style="max-width: 60%" src="assets/img/others/discord-mascot.png" alt="React Native" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Team communication
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <h3 class="text-uppercase">Non-Functional Requirements</h2>
+                    <h3 class="text-uppercase">Project Calendar</h3>
+                    <img class="image-doc" src="assets/img/diagrams/Lifecycle.png" alt="Project Calendar" />
+                    <br><br>
+
+                    <br><br>
+                    <h1 class="text-uppercase">Elaboration Phase</h1>
+                    <h3 class="text-uppercase">Non-Functional Requirements</h3>
                     <ul class="text-muted font-weight-light mb-5">
                         <li>Scalability - When many users use the API at the same time</li>
                         <li>Reliability - It shouldn’t crash all the time</li>
@@ -354,13 +420,13 @@
                         <li>Usability - Intuitive application</li>
                     </ul>
 
-                    <h3 class="text-uppercase">Actors</h2>
+                    <h3 class="text-uppercase">Actors</h3>
 
-                    <h3 class="text-uppercase">Use Cases</h2>
+                    <h3 class="text-uppercase">Use Cases</h3>
 
-                    <h3 class="text-uppercase">Domain Model</h2>
+                    <h3 class="text-uppercase">Domain Model</h3>
 
-                    <h3 class="text-uppercase">Deployment Diagram</h2>
+                    <h3 class="text-uppercase">Deployment Diagram</h3>
 
                     <h3 class="text-uppercase">Mock-Ups</h2>
                 </div>
@@ -372,17 +438,17 @@
                 <div class="col-lg-12">
                     <!-- Project details-->
                     <!-- Body-->
-                    <h3 class="text-uppercase">Functional Requirements</h2>
+                    <h3 class="text-uppercase">Functional Requirements</h3>
                     <ul class="text-muted font-weight-light mb-5">
                         <li>The system must be able to receive a photo and an user ID</li>
                         <li>The system must get the user old photo from the database</li>
-                        <li>The system must compare the old photo and new photo to check if it's the same person</li>
+                        <li>The system must compare the photos and check if it’s the same person</li>
                         <li>The system must detect a series of properties from the new photo</li>
                         <li>The system must send the detected properties in a JSON format to the user</li>
                         <li>The systen must allow for plugins to be added for detection of more properties</li>
                     </ul>
 
-                    <h3 class="text-uppercase">Algorithms</h2>
+                    <h3 class="text-uppercase">Algorithms</h3>
                     <ul class="text-muted font-weight-light mb-5">
                         <li>Facial Recognition</li>
                         <li>Fix face orientation</li>
