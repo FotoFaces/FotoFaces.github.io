@@ -316,22 +316,64 @@
                         <li>The system must check the validity of a photo (based on its properties)</li>
                         <li>The system must show the user if the chosen photo is valid</li>
                     </ul>
-
-                    <h3 class="text-uppercase">Development Tools</h3>
                     <div class="container">
                         <div class="row">
-                            <div align="center" class="col-md-3">
-                                <img class="image-doc" style="max-width: 60%" src="assets/img/others/react_native.png" alt="React Native" />
-                                <p class="text-muted font-weight-light mb-5">
-                                    React Native
-                                </p>
+                            <div class="col-md-6">
+                                <h3 class="text-uppercase">Development Tools</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center" class="col-md-8">
+                                            <img class="image-doc" src="assets/img/others/react_native.png" alt="React Native" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                React Native
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="text-uppercase">Database</h3>
+                                <img class="image-doc" src="assets/img/diagrams/db.png" alt="Database" />
+                                <br><br>
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-uppercase">Database</h3>
-                    <img class="image-doc" src="assets/img/diagrams/db.png" alt="Database" />
-                    <br><br>
+                    <h3 class="text-uppercase">Mock-Ups</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div align="center" class="col-md-2">
+                                <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/homepage.jpg" alt="Home Page" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Home Page
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-2">
+                                <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/login.jpg" alt="Login" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Login
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-2">
+                                <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/register.jpg" alt="Register" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Register
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-2">
+                                <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/upload.jpg" alt="Photo Upload" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Photo Upload
+                                </p>
+                            </div>
+                            <div align="center" class="col-md-2">
+                                <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/update.jpg" alt="Update Photo" />
+                                <p class="text-muted font-weight-light mb-5">
+                                    Update Photo
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -441,19 +483,16 @@
                                 </span>
                                 <h5>Student</h5>
                             </div>
-                            <div class="col-md-4">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fas fa-circle fa-stack-2x text-secondary"></i>
-                                    <i class="fas fa-user-cog fa-stack-1x fa-inverse"></i>
-                                </span>
-                                <h5>Admin</h5>
-                            </div>
                         </div>
                     </div>
                     <br>   
 
                     <h3 class="text-uppercase">Use Cases</h3>
-                    <img class="image-doc" src="assets/img/diagrams/UseCase.png" alt="Use Case" />
+                    <img class="image-doc" src="assets/img/diagrams/UseCase.png" alt="Use Case"/>
+                    <br>
+                    <span class="text-muted font-weight-light mb-5">
+                        User opens app, makes login, checks his or her photo, decides to take a newer photo, the app offers mechanisms to upload or to take a new photo, User waits for the response containing all the metrics of the FotoFaces then the mobile app validates those criterias and a new screen appears to the user offering them to take the red or the blue pill, while exhibiting the photo after cropping and fixing the pitch, yaw and raw.
+                    </span>
                     <br><br>
 
                     <h3 class="text-uppercase">Domain Model</h3>
@@ -463,8 +502,6 @@
                     <h3 class="text-uppercase">Deployment Diagram</h3>
                     <img class="image-doc" src="assets/img/diagrams/DeploymentModel.png" alt="Deployment Model" />
                     <br><br>
-
-                    <h3 class="text-uppercase">Mock-Ups</h2>
 
                     <h3 class="text-uppercase">State of Art</h3>
                     <p class="text-muted font-weight-light mb-5">
@@ -559,7 +596,7 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Context</h2>
-                                    <p class="text-muted font-weight-light mb-5">Our project resides in identifying peoples on photos and adjusting those photos in order for them to have a high quality and an easy association between a person’s name and their face.We also strive to invalidate photos which do not respect some standards, for instance if the photo will be used on an identification card such as the citizen card we cannot let people wear glasses or use a hat, because that does not respect some laws, of course this must be an extra module because not every business model must be that strict.</p>
+                                    <p class="text-muted font-weight-light mb-5">Our project resides in identifying peoples on photos and adjusting those photos in order for them to have a high quality and an easy association between a person’s name and their face.<br>We also strive to invalidate photos which do not respect some standards, for instance if the photo will be used on an identification card such as the citizen card we cannot let people wear glasses or use a hat, because that does not respect some laws, of course this must be an extra module because not every business model must be that strict.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-times me-1"></i>
                                         Close
