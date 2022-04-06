@@ -7,6 +7,13 @@
 // Scripts
 // 
 
+window.onload(
+    document.getElementById("doc-gen").style.display = "block",
+    document.getElementById("tablinks2").classList.toggle("text-secondary"),
+    document.getElementById("tablinks2").classList.toggle("text-selected"),
+    document.getElementById("dark-mode").checked = false
+);
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -53,12 +60,6 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-window.onload(
-    document.getElementById("doc-gen").style.display = "block",
-    document.getElementById("tablinks2").classList.toggle("text-secondary"),
-    document.getElementById("tablinks2").classList.toggle("text-selected")
-);
-
 function Documentation(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -92,3 +93,10 @@ function Documentation(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 };
+
+function darkmode(check) {
+    if (check.click)
+    {
+        document.body.classList.toggle("dark-theme");
+    }
+}

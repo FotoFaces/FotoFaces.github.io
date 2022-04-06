@@ -33,6 +33,10 @@
                         <li class="nav-item"><a class="nav-link" href="#documentation">Documentation</a></li>
                         <!--<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>-->
                     </ul>
+                    <label class="switch" style="margin-left: 5px">
+                        <input type="checkbox" id="dark-mode" onclick="darkmode(this)"/>
+                        <span class="slider round"></span>
+                    </label>
                 </div>
             </div>
         </nav>
@@ -53,7 +57,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-secondary"></i>
-                            <i class="fas fa-regular fa-smile-beam fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-regular fa-smile-beam fa-stack-1x fa-inverse" id="icon-dark-mode" ></i>
                         </span>
                         <h4 class="my-3">FotoFaces</h4>
                         <p class="text-muted font-weight-light mb-0">Backend that can be incorporated into different business logic.</br>Capable of providing a good analysis of a set of parameters according to a given photo</p>
@@ -61,7 +65,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-secondary"></i>
-                            <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse" id="icon-dark-mode" ></i>
                         </span>
                         <h4 class="my-3">Mobile Application</h4>
                         <p class="text-muted font-weight-light mb-0">A Mobile Application written in React, both available to IOS and Android and easily ported to a similar WebSite.</br>React is a good plataform since it does not compromise performance</p>
@@ -69,7 +73,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-secondary"></i>
-                            <i class="fas fa-brain fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-brain fa-stack-1x fa-inverse" id="icon-dark-mode" ></i>
                         </span>
                         <h4 class="my-3">Modular</h4>
                         <p class="text-muted font-weight-light mb-0">Provides an easy way to adapt to new rules imposed by clients.</p>
@@ -78,7 +82,7 @@
             </div>
         </section>
         <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section" id="portfolio">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">About the Project</h2>
@@ -179,7 +183,7 @@
         </section>
 
         <!-- Team-->
-        <section class="testimonials text-center bg-light" id="team">
+        <section class="testimonials text-center" id="team">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <h2 class="mb-5">Team</h2>
@@ -262,7 +266,7 @@
                             <a class="doc-link">
                                 <span class="fa-stack fa-4x">
                                     <i class="fas fa-circle fa-stack-2x text-secondary" id="tablinks1"></i>
-                                    <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse"></i>
+                                    <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse" id="icon-dark-mode" ></i>
                                 </span>
                             </a>
                         </button>
@@ -274,7 +278,7 @@
                         <a class="doc-link">
                             <span class="fa-stack fa-4x">
                                 <i class="fas fa-circle fa-stack-2x text-secondary" id="tablinks2"></i>
-                                <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-bars fa-stack-1x fa-inverse" id="icon-dark-mode"  id="icon-dark-mode" ></i>
                             </span>
                         </a>
                         </button>
@@ -286,7 +290,7 @@
                         <a class="doc-link">
                             <span class="fa-stack fa-4x">
                                 <i class="fas fa-circle fa-stack-2x text-secondary" id="tablinks3"></i>
-                                <i class="fas fa-camera-retro fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-camera-retro fa-stack-1x fa-inverse" id="icon-dark-mode" ></i>
                             </span>
                         </a>
                         </button>
@@ -468,14 +472,14 @@
                             <div class="col-md-4">
                                 <span class="fa-stack fa-4x">
                                     <i class="fas fa-circle fa-stack-2x text-secondary"></i>
-                                    <i class="fas fa-user-tie fa-stack-1x fa-inverse"></i>
+                                    <i class="fas fa-user-tie fa-stack-1x fa-inverse" id="icon-dark-mode" ></i>
                                 </span>
                                 <h5>Employees</h5>
                             </div>
                             <div class="col-md-4">
                                 <span class="fa-stack fa-4x">
                                     <i class="fas fa-circle fa-stack-2x text-secondary"></i>
-                                    <i class="fas fa-user-alt fa-stack-1x fa-inverse"></i>
+                                    <i class="fas fa-user-alt fa-stack-1x fa-inverse" id="icon-dark-mode" ></i>
                                 </span>
                                 <h5>Human Resources representatives</h5>
                             </div>
