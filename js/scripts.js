@@ -54,9 +54,9 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 window.onload(
-    document.getElementById("doc-app").style.display = "block",
-    document.getElementById("tablinks1").classList.toggle("text-secondary"),
-    document.getElementById("tablinks1").classList.toggle("text-selected")
+    document.getElementById("doc-gen").style.display = "block",
+    document.getElementById("tablinks2").classList.toggle("text-secondary"),
+    document.getElementById("tablinks2").classList.toggle("text-selected")
 );
 
 function Documentation(evt, cityName) {
