@@ -55,6 +55,7 @@
                     </button>
                     <h4 class="my-3">Mobile Application</h4>
                     <p class="text-muted font-weight-light mb-0">Some Documentation for the Mobile App needed</p>
+                    <br>
                     <button class="btn-app" onclick="Documentation(event, 'doc-gen')">
                         <a class="doc-link">
                             <span class="fa-stack fa-4x">
@@ -65,6 +66,7 @@
                     </button>
                     <h4 class="my-3">General</h4>
                     <p class="text-muted font-weight-light mb-0">General Documentation like diagrams, tasks and roles</p>
+                    <br>
                     <button class="btn-app" onclick="Documentation(event, 'doc-fot')">
                         <a class="doc-link">
                             <span class="fa-stack fa-4x">
@@ -151,6 +153,41 @@
                                             <p class="text-muted font-weight-light mb-5">
                                                 Update Photo
                                             </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br><br>
+                                <h1 class="text-uppercase">Construction Phase</h1>
+                                <br>
+                                <div class="container">
+                                    <div class="row">
+                                        <h3 class="text-uppercase">Take photo from camera roll</h3>
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/upload.jpg" alt="Update Photo" />
+                                        </div>
+                                        <div align="center" class="col-md-4" style="margin: auto">
+                                            <span class="fa-stack fa-4x">
+                                                <i class="fas fa-angle-double-right fa-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/upload.jpg" alt="Update Photo" />
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                        <h3 class="text-uppercase">Choose photo from gallery</h3>
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/upload.jpg" alt="Update Photo" />
+                                        </div>
+                                        <div align="center" class="col-md-4" style="margin: auto">
+                                            <span class="fa-stack fa-4x">
+                                                <i class="fas fa-angle-double-right fa-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/upload.jpg" alt="Update Photo" />
                                         </div>
                                     </div>
                                 </div>
@@ -287,6 +324,58 @@
                                 <p class="text-muted font-weight-light mb-5">
                                     <a class="link-primary" href="https://id.ua.pt/">id.ua.pt</a> already offers services that includes a similar software than the one we are going to build
                                 </p>
+                                <br><br>
+
+                                <br><br>
+                                <h1 class="text-uppercase">Construction Phase</h1>
+                                <h3 class="text-uppercase">Database</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/database/database_creation.png" alt="Create" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Database Creation
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/database/database_update.png" alt="Update" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Database Update
+                                            </p>
+                                        </div>
+                                    </div>  
+                                    <div class="row">
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/database/database_get.png" alt="Get" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Database Get
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br><br>
+                                <h3 class="text-uppercase">Message Dealing</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/database/kafka_produce_fotofaces.png" alt="fotofaces" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Kafka in Fotofaces
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/database/kafka_produce_api.png" alt="api" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Kafka in API
+                                            </p>
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -398,6 +487,57 @@
                                         </div>
                                     </div>
                                 </div>
+                                <br>
+
+                                <br><br>
+                                <h1 class="text-uppercase">Construction Phase</h1>
+                                <h3 class="text-uppercase">Plugin Arquitecture</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/database/Plugin_arquitecture.png" alt="plugin" />
+                                            <br><br>
+                                            <div class="text-muted font-weight-light mb-5">
+                                                <p>Each plugin folder (like Gaze) contains a python file with the algorithm code, with useful functions if needed, and a .yaml configuration file.</p>
+                                                <p>The main application will gather all the plugins and run them consecutively, until there are no more to execute.</p>
+                                                <p>Then it will gather each algorithm result and convert it into a single json message</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <h3 class="text-uppercase">Testing</h3>
+                                <div class="container">
+                                    <div class="text-muted font-weight-light mb-5">
+                                        <p>All tests are conducted to a specified algorithm</p>
+                                        <p>They were made to observe the time the algorithms take to execute, from both the old and new fotofaces, as well as how well do they work</p>
+                                    </div>
+                                    <div class="row">
+                                        <h4 class="text-uppercase">Face Detection</h4>
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/tests/FaceDetection.png" alt="faceDetection" />
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                        <h4 class="text-uppercase">Facial Comparison</h4>
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/tests/Test_comparison1.png" alt="comparison_success" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Same person = True 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/tests/Test_Comparison2.png" alt="comparison_fail" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Different people = False
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
