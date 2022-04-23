@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>FotoFaces - UA</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.png" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#documentation">Documentation</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>-->
+                    </ul>
+                    <label class="switch" style="margin-left: 5px">
+                        <input type="checkbox" id="dark-mode" onclick="darkmode(this)"/>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+        <div class="container page-section text-center">
+            <div class="row">
+                <div class="col-sm-3" id="docs">
+                    <button class="btn-app" onclick="Documentation(event, 'doc-app')">
+                        <a class="doc-link">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-secondary" id="tablinks1"></i>
+                                <i class="fas fa-regular fa-mobile-alt fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </button>
+                    <h4 class="my-3">Mobile Application</h4>
+                    <p class="text-muted font-weight-light mb-0">Some Documentation for the Mobile App needed</p>
+                    <button class="btn-app" onclick="Documentation(event, 'doc-gen')">
+                        <a class="doc-link">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-selected" id="tablinks2"></i>
+                                <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </button>
+                    <h4 class="my-3">General</h4>
+                    <p class="text-muted font-weight-light mb-0">General Documentation like diagrams, tasks and roles</p>
+                    <button class="btn-app" onclick="Documentation(event, 'doc-fot')">
+                        <a class="doc-link">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-secondary" id="tablinks3"></i>
+                                <i class="fas fa-camera-retro fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </button>
+                    <h4 class="my-3">FotoFaces</h4>
+                    <p class="text-muted font-weight-light mb-0">Some Documentation for the FotoFaces API and algorithms</p>
+                </div>
+                <div class="col-md-9" style="overflow:auto; height: 100vh">
+                    <!-- Documentation Modals-->
+                    <!-- Mobile App-->
+                    <div class="tabcontent container" id="doc-app">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <!-- Project details-->
+                                <!-- Body-->
+                                <h3 class="text-uppercase">Functional Requirements</h3>
+                                <ul class="text-muted font-weight-light mb-5">
+                                    <li>The system must allow the user to login with username and password (or SSO)</li>
+                                    <li>The system must allow the user to check his current photo</li>
+                                    <li>The system must allow the user to check the properties needed for a photo to be valid</li>
+                                    <li>The system must allow the user to pick between taking a live photo or choosing a photo from the gallery and do one of them</li>
+                                    <li>The system must allow the user to choose between updating a valid photo, going back to the last menu or return to the main page</li>
+                                    <li>The system must send a photo and the user ID to the FotoFaces API</li>
+                                    <li>The system must receive a JSON from the FotoFaces API with the validation properties</li>
+                                    <li>The system must check the validity of a photo (based on its properties)</li>
+                                    <li>The system must show the user if the chosen photo is valid</li>
+                                </ul>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h3 class="text-uppercase">Development Tools</h3>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div align="center" class="col-md-8">
+                                                        <img class="image-doc" src="assets/img/others/react_native.png" alt="React Native" />
+                                                        <p class="text-muted font-weight-light mb-5">
+                                                            React Native
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h3 class="text-uppercase">Database</h3>
+                                            <img class="image-doc" src="assets/img/diagrams/db.png" alt="Database" />
+                                            <br><br>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="text-uppercase">Mock-Ups</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center" class="col-md-2">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/homepage.jpg" alt="Home Page" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Home Page
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-2">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/login.jpg" alt="Login" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Login
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-2">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/register.jpg" alt="Register" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Register
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-2">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/upload.jpg" alt="Photo Upload" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Photo Upload
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-2">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/mockups/update.jpg" alt="Update Photo" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Update Photo
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- General App-->
+                    <div class="tabcontent container" id="doc-gen">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <!-- Project details-->
+                                <!-- Body-->
+                                <h1 class="text-uppercase">Architecture</h1>
+                                <h3 class="text-uppercase">Simple Architecture</h3>
+                                <img class="image-doc" src="assets/img/diagrams/Simple_Architecture.png" alt="Simple Architecture" />
+                                <br><br>
+
+                                <br><br>
+                                <h1 class="text-uppercase">Inception Phase</h1>
+                                <h3 class="text-uppercase">Communication Plan</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" style="max-width: 60%" src="assets/img/others/discord-mascot.png" alt="Discord" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Team communication
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" style="max-width: 57%" src="assets/img/others/slack.png" alt="Slack" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Advisor-Team discussion
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" style="max-width: 107%" src="assets/img/others/GitHub-Logo.png" alt="Github" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Project Bakclog management
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" style="max-width: 60%" src="assets/img/others/website.png" alt="Website" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                            Promotional Website
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <h3 class="text-uppercase">Development Tools</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/others/react_native.png" alt="React Native" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Mobile App building
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" style="max-width: 107%" src="assets/img/others/GitHub-Logo.png" alt="Github" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Code repository
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" style="max-width: 60%" src="assets/img/others/react.webp" alt="React" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                            Website building
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" style="max-width: 60%" src="assets/img/others/discord-mascot.png" alt="Discord" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Team communication
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="text-uppercase">Project Calendar</h3>
+                                <img class="image-doc" src="assets/img/diagrams/Lifecycle.png" alt="Project Calendar" />
+                                <br><br>
+
+                                <br><br>
+                                <h1 class="text-uppercase">Elaboration Phase</h1>
+                                <h3 class="text-uppercase">Non-Functional Requirements</h3>
+                                <ul class="text-muted font-weight-light mb-5">
+                                    <li>Scalability - When many users use the API at the same time</li>
+                                    <li>Reliability - It shouldn’t crash all the time</li>
+                                    <li>Availability - Always available to any user</li>
+                                    <li>Maintainability - Maintain documentation and infrastructure</li>
+                                    <li>Usability - Intuitive application</li>
+                                </ul>
+
+                                <h3 class="text-uppercase">Actors</h3>
+                                <div class="container">
+                                    <div class="row" align="center">
+                                        <div class="col-md-4">
+                                            <span class="fa-stack fa-4x">
+                                                <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+                                                <i class="fas fa-user-tie fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                            <h5>Employees</h5>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <span class="fa-stack fa-4x">
+                                                <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+                                                <i class="fas fa-user-alt fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                            <h5>Human Resources representatives</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>   
+
+                                <h3 class="text-uppercase">Use Cases</h3>
+                                <img class="image-doc" src="assets/img/diagrams/UseCase.png" alt="Use Case"/>
+                                <br>
+                                <span class="text-muted font-weight-light mb-5">
+                                    User opens app, makes login, checks his or her photo, decides to take a newer photo, the app offers mechanisms to upload or to take a new photo, User waits for the response containing all the metrics of the FotoFaces then the mobile app validates those criterias and a new screen appears to the user offering them to take the red or the blue pill, while exhibiting the photo after cropping and fixing the pitch, yaw and raw.
+                                </span>
+                                <br><br>
+
+                                <h3 class="text-uppercase">Domain Model</h3>
+                                <img class="image-doc" src="assets/img/diagrams/DomainModel.png" alt="Domain Model" />
+                                <br><br>
+
+                                <h3 class="text-uppercase">Deployment Diagram</h3>
+                                <img class="image-doc" src="assets/img/diagrams/DeploymentModel.png" alt="Deployment Model" />
+                                <br><br>
+
+                                <h3 class="text-uppercase">State of Art</h3>
+                                <p class="text-muted font-weight-light mb-5">
+                                    <a class="link-primary" href="https://id.ua.pt/">id.ua.pt</a> already offers services that includes a similar software than the one we are going to build
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FotoFaces App-->
+                    <div class="tabcontent container" id="doc-fot">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <!-- Project details-->
+                                <!-- Body-->
+                                <h3 class="text-uppercase">Functional Requirements</h3>
+                                <ul class="text-muted font-weight-light mb-5">
+                                    <li>The system must be able to receive a photo and an user ID</li>
+                                    <li>The system must get the user old photo from the database</li>
+                                    <li>The system must compare the photos and check if it’s the same person</li>
+                                    <li>The system must detect a series of properties from the new photo</li>
+                                    <li>The system must send the detected properties in a JSON format to the user</li>
+                                    <li>The systen must allow for plugins to be added for detection of more properties</li>
+                                </ul>
+
+                                <h3 class="text-uppercase">Development Tools</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 60%" src="assets/img/others/flask.png" alt="React Native" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Flask
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 40%" src="assets/img/others/OpenCV_Logo.png" alt="React Native" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                OpenCV
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 50%" src="assets/img/others/dlib_find_min_global_header.webp" alt="React Native" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Dlib
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="text-uppercase">Algorithms</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <ul class="text-muted font-weight-light mb-5">
+                                                <li>Facial Recognition</li>
+                                                <li>Face Reference Detected</li>
+                                                <li>Face Orientation</li>
+                                                <li>Frontal Face</li>
+                                                <li>Analyse photo quality</li>
+                                                <li>Analyse photo brightness</li>
+                                                <li>Analyse colored Picture</li>
+                                                <li>Blur background</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="text-muted font-weight-light mb-5">
+                                                <li>Resize</li>
+                                                <li>Cropping</li>
+                                                <li>EyesOpen</li>
+                                                <li>Gaze</li>
+                                                <li>Hat</li>
+                                                <li>Glasses</li>
+                                                <li>Sunglasses</li>
+                                                <li>Implement deep learning</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="text-uppercase">Properties</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5 class="text-muted">Returns True or False for the following:</h5>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5 class="text-muted">Returns Levels for the following:</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <ul class="text-muted font-weight-light mb-5">
+                                                <li>Has a face</li>
+                                                <li>Macthes old photo</li>
+                                                <li>Blurred</li>
+                                                <li>Cropped</li>
+                                                <li>Live</li>
+                                                <li>Colored</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="text-muted font-weight-light mb-5">
+                                                <li>Eyes Open</li>
+                                                <li>Frontal Profile</li>
+                                                <li>Hat</li>
+                                                <li>Glasses</li>
+                                                <li>Sunglasses</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="text-muted font-weight-light mb-5">
+                                                <li>Brightness</li>
+                                                <li>Quality</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; FotoFaces 2021</div>
+                    <div class="col-lg-4 my-3 my-lg-0 text-center">
+                        <a class="btn btn-dark btn-social mx-2" href="http://www.github.com/FotoFaces"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Context</h2>
+                                    <p class="text-muted font-weight-light mb-5">Our project resides in identifying peoples on photos and adjusting those photos in order for them to have a high quality and an easy association between a person’s name and their face.<br>We also strive to invalidate photos which do not respect some standards, for instance if the photo will be used on an identification card such as the citizen card we cannot let people wear glasses or use a hat, because that does not respect some laws, of course this must be an extra module because not every business model must be that strict.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Problem</h2>
+                                    <p class="text-muted font-weight-light mb-5" >Our project will consist of a mobile application that sends a photo to an API which will respond with characteristics of that photo (Ex.: Has a face, has glasses…) and, according to the response message, the mobile app will check if it’s valid and update it to the database.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase mb-5">Goals</h2>
+                                    <ul class="text-muted font-weight-light mb-5 list-style-type:circle text-start mt-2 mx-auto">
+                                        <li>
+                                          Facial Recognition functionalities
+                                        </li>
+                                        <li>
+                                          Improve existing algorithms in FotoFaces
+                                        </li>
+                                        <li>
+                                          Add algorithms to FotoFaces to improve the reliability of the Facial Recognition
+                                        </li>
+                                        <li>
+                                          Implement deep learning to make the FotoFaces algorithms more reliable
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase mb-5">Risks</h2>
+                                    <ul class="text-muted font-weight-light mb-5 list-style-type:circle text-start mt-2 mx-auto">
+                                        <li>
+                                                Modularization Problems
+                                        </li>
+                                        <li>
+                                                Performance and Efficiency of the algorithms
+                                        </li>
+                                        <li>
+                                                Bad implementation of deep learning
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase mb-5">Expected Results</h2>
+                                    <ul class="text-muted font-weight-light mb-5 list-style-type:circle text-start mx-auto mt-3">
+                                        <li>
+                                              Fully functional mobile app with FotoFaces integration
+                                        </li>
+                                        <li>
+                                              Reliable Facial Recognition
+                                        </li>
+                                        <li>
+                                              Robust backend capable of scaling
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase mx-auto mb-5">Related Work</h2>
+                                    <ul class="text-muted font-weight-light mb-5 list-inline text-start mx-auto" >
+                                        <li>
+                                          <a class="link-primary" href="https://github.com/hamzasafdar01/Image-Blur-detection-and-image-quality-check-python">Blur detection and image quality check</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://www.pyimagesearch.com/2015/09/07/blur-detection-with-opencv/">Blur detection with OpenCV</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://github.com/WillBrennan/BlurDetection2">Blur detection</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= http://scikit-image.org/docs/dev/api/skimage.exposure.html">Python image processing library</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://github.com/AndreasMerentitis/detect-contrast-blurriness">Blur and contrast detection</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://github.com/TianxingWu/realtime-glasses-detection">Realtime glasses detector</a>
+                                        </li>
+                                        <li>
+                                          <a class="link-primary" href= https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/">Liveness detection</a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scriptdocs.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

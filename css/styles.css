@@ -61,6 +61,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
+  --bs-body-navbar: #212529;
   --bs-body-bg: #fff;
   --bs-text-selected: 255, 196, 0;
   --bs-body-bg-rev: #000;
@@ -89,6 +90,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
 }
 
 hr {
@@ -11396,7 +11398,7 @@ p {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529;
+    background-color: var(--bs-body-navbar);
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -11818,6 +11820,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   --bs-body-color: #fff;
   --bs-primary: #212529;
   --bs-body-bg-rev: #fff;
+  --bs-body-navbar: #494c4f;
 }
 
  /* The switch - the box around the slider */
