@@ -159,6 +159,7 @@
 
                                 <br><br>
                                 <h1 class="text-uppercase">Construction Phase</h1>
+                                <h3 class="text-uppercase">Photo</h3>
                                 <br>
                                 <div class="container">
                                     <div class="row">
@@ -173,6 +174,40 @@
                                             <p class="text-muted font-weight-light mb-5">
                                                 Choose photo from gallery
                                             </p>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                </div>
+
+                                <br>
+                                <h3 class="text-uppercase">Communication with the REST API</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center" class="col-sm-12">
+                                            <code>
+                                                let resp = fetch('http://localhost:8393/user/'+email.value, {
+                                                    method: 'GET',
+                                                  }).then((data)=>{
+                                                    data.json().then((logins) => {
+                                              
+                                                      let hex_md5v = md5.hex_md5( password.value );
+                                              
+                                                      if (hex_md5v === logins["password"]) {
+                                                        navigation.navigate('MainScreen', 
+                                                        {
+                                                          email: email.value,
+                                                          identifier: logins["id"],
+                                                          old_photo: logins["photo"]
+                                                        }
+                                                        );
+                                                      }
+                                                      else {
+                                                        setEmail({ ...email, error: " " })
+                                                        setPassword({ ...password, error: "Email or password incorrect" })
+                                                      }
+                                                    })
+                                                  })
+                                            </code>
                                         </div>
                                     </div>
                                     <br><br>
@@ -217,7 +252,7 @@
                                         <div align="center" class="col-md-3">
                                             <img class="image-doc" style="max-width: 60%" src="assets/img/others/website.png" alt="Website" />
                                             <p class="text-muted font-weight-light mb-5">
-                                            Promotional Website
+                                                Promotional Website
                                             </p>
                                         </div>
                                         
@@ -242,7 +277,7 @@
                                         <div align="center" class="col-md-3">
                                             <img class="image-doc" style="max-width: 60%" src="assets/img/others/react.webp" alt="React" />
                                             <p class="text-muted font-weight-light mb-5">
-                                            Website building
+                                                Website building
                                             </p>
                                         </div>
                                         <div align="center" class="col-md-3">
@@ -347,20 +382,11 @@
                                 <div class="container">
                                     <div class="row">
                                         <div align="center">
-                                            <img class="image-doc" src="assets/img/database/kafka_produce_fotofaces.png" alt="fotofaces" />
                                             <p class="text-muted font-weight-light mb-5">
-                                                Kafka in Fotofaces
+                                                Flask API
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div align="center">
-                                            <img class="image-doc" src="assets/img/database/kafka_produce_api.png" alt="api" />
-                                            <p class="text-muted font-weight-light mb-5">
-                                                Kafka in API
-                                            </p>
-                                        </div>
-                                    </div>  
                                 </div>
                             </div>
                         </div>
@@ -523,7 +549,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
