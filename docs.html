@@ -181,37 +181,28 @@
 
                                 <br>
                                 <h3 class="text-uppercase">Communication with the REST API</h3>
-                                <div class="container">
-                                    <div class="row">
-                                        <div align="center" class="col-sm-12">
-                                            <code>
-                                                let resp = fetch('http://localhost:8393/user/'+email.value, {
-                                                    method: 'GET',
-                                                  }).then((data)=>{
-                                                    data.json().then((logins) => {
-                                              
-                                                      let hex_md5v = md5.hex_md5( password.value );
-                                              
-                                                      if (hex_md5v === logins["password"]) {
-                                                        navigation.navigate('MainScreen', 
-                                                        {
-                                                          email: email.value,
-                                                          identifier: logins["id"],
-                                                          old_photo: logins["photo"]
-                                                        }
-                                                        );
-                                                      }
-                                                      else {
-                                                        setEmail({ ...email, error: " " })
-                                                        setPassword({ ...password, error: "Email or password incorrect" })
-                                                      }
-                                                    })
-                                                  })
-                                            </code>
-                                        </div>
-                                    </div>
-                                    <br><br>
-                                </div>
+                                <p>let resp = fetch('http://localhost:8393/user/'+email.value, {
+                                    method: 'GET',
+                                  }).then((data)=>{
+                                    data.json().then((logins) => {
+                              
+                                      let hex_md5v = md5.hex_md5( password.value );
+                              
+                                      if (hex_md5v === logins["password"]) {
+                                        navigation.navigate('MainScreen', 
+                                        {
+                                          email: email.value,
+                                          identifier: logins["id"],
+                                          old_photo: logins["photo"]
+                                        }
+                                        );
+                                      }
+                                      else {
+                                        setEmail({ ...email, error: " " })
+                                        setPassword({ ...password, error: "Email or password incorrect" })
+                                      }
+                                    })
+                                  })</p>
                             </div>
                         </div>
                     </div>
@@ -382,9 +373,31 @@
                                 <div class="container">
                                     <div class="row">
                                         <div align="center">
-                                            <p class="text-muted font-weight-light mb-5">
-                                                Flask API
-                                            </p>
+                                            <h4 class="text-muted font-weight-light mb-5">
+                                                Http
+                                            </h4>
+                                            <p>let resp = fetch('http://localhost:8393/user/'+email.value, {
+                                                method: 'GET',
+                                              }).then((data)=>{
+                                                data.json().then((logins) => {
+                                          
+                                                  let hex_md5v = md5.hex_md5( password.value );
+                                          
+                                                  if (hex_md5v === logins["password"]) {
+                                                    navigation.navigate('MainScreen', 
+                                                    {
+                                                      email: email.value,
+                                                      identifier: logins["id"],
+                                                      old_photo: logins["photo"]
+                                                    }
+                                                    );
+                                                  }
+                                                  else {
+                                                    setEmail({ ...email, error: " " })
+                                                    setPassword({ ...password, error: "Email or password incorrect" })
+                                                  }
+                                                })
+                                              })</p>
                                         </div>
                                     </div>
                                 </div>
