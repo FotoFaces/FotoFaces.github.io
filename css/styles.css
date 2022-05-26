@@ -65,6 +65,14 @@
   --bs-body-bg: #fff;
   --bs-text-selected: 255, 196, 0;
   --bs-body-bg-rev: #000;
+  --blue:rgba(79,192,210,1);
+  --green:rgba(82,210,154,1);
+  --yellow:rgba(231,196,104,0.7);
+  --orange:rgba(235,118,85,1);
+  --dark-bg:rgba(0,0,0,0.9);
+  --light-bg:rgb(68, 68, 68);
+  --text:rgba(255,255,255,0.9);
+  --title: rgb(39, 39, 39);
 }
 
 *,
@@ -11821,6 +11829,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   --bs-primary: #212529;
   --bs-body-bg-rev: #fff;
   --bs-body-navbar: #494c4f;
+  --title: rgb(45, 45, 45);
 }
 
  /* The switch - the box around the slider */
@@ -11885,3 +11894,226 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 } 
+
+
+/* Google fonts - Open Sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/* links */
+.nfl .act, .mlb .act, .nhl .acta, .pga .act {text-decoration:none;transition: color 0.2s ease-out;}
+.nfl .act {color:var(--blue);}
+.nfl .act:hover {color:darken(var(--blue), 20%);}
+.mlb .act {color:var(--green);}
+.mlb .act:hover {color:darken(var(--green), 20%);}
+.nhl .act {color:var(--yellow);}
+.nhl .act:hover {color:darken(var(--yellow), 20%);}
+.pga .act {color:var(--orange);}
+.pga .act:hover {color:darken(var(--orange), 20%);}
+
+/* wrapper */
+.wrapper {
+  width:100%;
+  max-width:90%;
+  margin:20px auto 100px auto;
+  padding:0;
+  color:var(--text);
+  overflow:hidden;
+  position:relative;
+  background:var(--light-bg);
+}
+
+/* lists */
+.row-t ul {
+  margin:0;
+  padding:0;
+}
+.row-t ul li  {
+  margin:0;
+  font-size:16px;
+  font-weight:normal;
+  list-style:none;
+  display:inline-block;
+  width:20%;
+	box-sizing:border-box;
+  @media only screen and (max-width:767px) and (min-width:480px) {
+    font-size:13px;
+  }
+  @media only screen and (max-width:479px) {
+    font-size:13px;
+  }
+}
+
+.title ul li {
+  padding:15px 13px;
+}
+.row-t ul li {
+  padding:5px 10px;
+}
+
+/* rows */
+.row-t {
+  padding:20px 0;
+  height:70px;
+  font-size:0;
+  position:relative;
+  overflow:hidden;
+  transition:all 0.2s ease-out;
+  border-top:1px solid darken(var(--light-bg), 100%);
+}
+.row-t:hover {
+  background-color:lighten(var(--dark-bg), 10%);
+  height:115px;
+  @media only screen and (max-width : 767px) {
+    height:115px;
+  }
+  @media only screen and (max-width : 359px) {
+    height:115px;
+  }
+}
+.title {
+  padding:25px 0 5px 0;
+  height:75px;
+  font-size:0;
+  background-color:var(--title);
+  border-left:10px solid lighten(var(--light-bg), 100%);
+}
+.title:hover {
+  height:75px;
+  background-color:var(--title);
+  border-left:3px solid lighten(var(--light-bg), 100%);
+}
+
+.title-hide {
+  @media only screen and (max-width:767px) {
+    display:none;
+  }
+}
+
+.nfl {border-left:3px solid darken(var(--blue), 30%);}
+.nfl:hover {border-left:3px solid var(--blue);}
+.mlb {border-left:3px solid darken(var(--green), 30%);}
+.mlb:hover {border-left:3px solid var(--green);}
+.nhl {border-left:3px solid darken(var(--yellow), 30%)}
+.nhl:hover {border-left:3px solid var(--yellow);}
+.pga {border-left:3px solid darken(var(--orange), 30%);}
+.pga:hover {border-left:3px solid var(--orange);}
+
+/* row one - fadeIn */
+.row-fadeIn-wrapper {
+  opacity:0;
+  font-size:0;
+  height:0;
+  overflow:hidden;
+  position:relative;
+  transition:all 0.2s ease-out;
+  animation:fadeIn 0.4s ease-out 2s 1 alternate;
+  animation-fill-mode:forwards;
+}
+.row-fadeIn-wrapper:hover {
+  height:35px;
+  @media only screen and (max-width : 767px) {
+    height:55px;
+  }
+  @media only screen and (max-width : 359px) {
+    height:75px;
+  }
+}
+
+.fadeIn {
+  padding:20px 0;
+  font-size:0;
+  position:absolute;
+  transition:all 0.2s ease-out;
+  width:100%;
+}
+.fadeIn:hover {
+  background-color:lighten(var(--dark-bg), 10%);
+}
+light
+/* row two - fadeOut */
+.row-fadeOut-wrapper {
+  font-size:0;
+  overflow:hidden;
+  position:relative;
+  transition:all 0.2s ease-out;
+  animation:fadeOut 0.4s ease-out 8s 1 alternate;
+  animation-fill-mode:forwards;
+  opacity:1;
+  height:65px;
+}
+.row-fadeOut-wrapper:hover {
+  height:100px;
+}
+
+/* update content */
+.update-row {
+  animation:update 0.5s ease-out 12s 1 alternate;
+}
+.update1 {
+  position:absolute;
+  top:25px;
+  display:inline-block;
+  opacity:1;
+  animation:update1 1s ease-out 12s 1 alternate;
+  animation-fill-mode:forwards;
+}
+.update2 {
+  position:absolute;
+  top:25px;
+  display:inline-block;
+  opacity:0;
+  animation:update2 4s ease-out 13s 1 alternate;
+  animation-fill-mode:forwards;
+}
+
+/* more content */
+ul.more-content li {
+  position:relative;
+  top:22px;
+  font-size:15px;
+  margin:0;
+  padding:10px 13px;
+  display:block;
+  height:50px;
+  width:100%;
+  color:darken(var(--text),50%);
+  @media only screen and (max-width:767px) {
+    font-size:11px;
+  }
+}
+
+/* small content */
+.small {
+  color:darken(var(--text),60%);
+  font-size:10px;
+  padding:0 10px;
+  margin:0;
+  @media only screen and (max-width:767px) {
+    display:none;
+  }
+}
+
+/* keyframe animations */
+@keyframes fadeIn {
+  from {background:var(--light-bg);opacity:0;padding:0;}
+  to {background:darken(var(--light-bg),80%);opacity:1;padding:0 0 65px 0;}
+}
+@keyframes fadeOut {
+  from {background:darken(var(--light-bg),80%);opacity:1;height:65px;}
+  to {background:var(--light-bg);opacity:0;height:0;}
+}
+@keyframes update {
+  0% {background:darken(var(--light-bg),80%);}
+  50% {background:var(--light-bg);}
+  100% {background:darken(var(--light-bg),80%);}
+}
+@keyframes update1 {
+  0% {opacity:0;}
+  0% {opacity:1;}
+  100% {opacity:0;}
+}
+@keyframes update2 {
+  0% {opacity:0;color:var(--text);}
+  20% {opacity:1;color:var(--green);}
+  100% {opacity:1;color:var(--text);}
+}
