@@ -31,6 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="index.html#portfolio">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="#documentation">Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#calendar">Calendar</a></li>
                         <!--<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>-->
                     </ul>
                     <label class="switch" style="margin-left: 5px">
@@ -176,36 +177,57 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <br><br>
                                 </div>
-
                                 <br>
-                                <h3 class="text-uppercase">Communication with the REST API</h3>
-                                <p>let resp = fetch('http://localhost:8393/user/'+email.value, {
-                                    method: 'GET',
-                                  }).then((data)=>{
-                                    data.json().then((logins) => {
-                              
-                                      let hex_md5v = md5.hex_md5( password.value );
-                              
-                                      if (hex_md5v === logins["password"]) {
-                                        navigation.navigate('MainScreen', 
-                                        {
-                                          email: email.value,
-                                          identifier: logins["id"],
-                                          old_photo: logins["photo"]
-                                        }
-                                        );
-                                      }
-                                      else {
-                                        setEmail({ ...email, error: " " })
-                                        setPassword({ ...password, error: "Email or password incorrect" })
-                                      }
-                                    })
-                                  })</p>
+                                <h3 class="text-uppercase">Design</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="row">
+                                            <div align="center" class="col-md-2">
+                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/startscreen.jpg" alt="Home Page" />
+                                                <p class="text-muted font-weight-light mb-5">
+                                                    Start Screen
+                                                </p>
+                                            </div>
+                                            <div align="center" class="col-md-2">
+                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/login.jpg" alt="Login" />
+                                                <p class="text-muted font-weight-light mb-5">
+                                                    Login Screen
+                                                </p>
+                                            </div>
+                                            <div align="center" class="col-md-2">
+                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/register.jpg" alt="Register" />
+                                                <p class="text-muted font-weight-light mb-5">
+                                                    Register Screen
+                                                </p>
+                                            </div>
+                                            <div align="center" class="col-md-2">
+                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/mainscreen1.jpg" alt="Photo Upload" />
+                                                <p class="text-muted font-weight-light mb-5">
+                                                    Main Screen
+                                                </p>
+                                            </div>
+                                            <div align="center" class="col-md-2">
+                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/mainscreen2.jpg" alt="Photo Upload" />
+                                                <p class="text-muted font-weight-light mb-5">
+                                                    Main Screen for Validation
+                                                </p>
+                                            </div>
+                                            <div align="center" class="col-md-2">
+                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/startscreen.jpg" alt="Update Photo" />
+                                                <p class="text-muted font-weight-light mb-5">
+                                                    Phot Accept Screen
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
+
                     <!-- General App-->
                     <div class="tabcontent container" id="doc-gen">
                         <div class="row justify-content-center">
@@ -366,44 +388,35 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div align="center">
+                                            <img class="image-doc" src="assets/img/swagger/unknown.png" alt="Get" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Database Endpoints
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <br><br>
+                                <br>
+
                                 <h3 class="text-uppercase">Message Dealing</h3>
                                 <div class="container">
                                     <div class="row">
                                         <div align="center">
-                                            <h4 class="text-muted font-weight-light mb-5">
-                                                Http
-                                            </h4>
-                                            <p>let resp = fetch('http://localhost:8393/user/'+email.value, {
-                                                method: 'GET',
-                                              }).then((data)=>{
-                                                data.json().then((logins) => {
-                                          
-                                                  let hex_md5v = md5.hex_md5( password.value );
-                                          
-                                                  if (hex_md5v === logins["password"]) {
-                                                    navigation.navigate('MainScreen', 
-                                                    {
-                                                      email: email.value,
-                                                      identifier: logins["id"],
-                                                      old_photo: logins["photo"]
-                                                    }
-                                                    );
-                                                  }
-                                                  else {
-                                                    setEmail({ ...email, error: " " })
-                                                    setPassword({ ...password, error: "Email or password incorrect" })
-                                                  }
-                                                })
-                                              })</p>
+                                            <img class="image-doc" src="assets/img/http-response.png" alt="Get" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Http message Example
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
+
+
                     <!-- FotoFaces App-->
                     <div class="tabcontent container" id="doc-fot">
                         <div class="row justify-content-center">
@@ -559,6 +572,32 @@
                                             <p class="text-muted font-weight-light mb-5">
                                                 Different people = False
                                             </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <h3 class="text-uppercase">Algorithms Implemented</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="text-muted font-weight-light mb-5">
+                                                <li>Face Detection</li>
+                                                <li>Cropping</li>
+                                                <li>Brightness</li>
+                                                <li>Open Eyes</li>
+                                                <li>Face Recognition</li>
+                                                <li>Focus / Gaze</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="text-muted font-weight-light mb-5">
+                                                <li>Glasses</li>
+                                                <li>Hats</li>
+                                                <li>Head Position</li>
+                                                <li>Image Quality</li>
+                                                <li>Sunglasses</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
