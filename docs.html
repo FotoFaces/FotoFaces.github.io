@@ -30,6 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href="index.html#features">Features</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html#portfolio">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html#team">Team</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="index.html#apk">Apk</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="#documentation">Documentation</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html#calendar">Calendar</a></li>
                         <!--<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>-->
@@ -202,19 +203,19 @@
                                                 </p>
                                             </div>
                                             <div align="center" class="col-md-2">
-                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/mainscreen1.jpg" alt="Photo Upload" />
-                                                <p class="text-muted font-weight-light mb-5">
-                                                    Main Screen
-                                                </p>
-                                            </div>
-                                            <div align="center" class="col-md-2">
                                                 <img class="image-doc" style="max-width: 90%" src="assets/img/design/mainscreen2.jpg" alt="Photo Upload" />
                                                 <p class="text-muted font-weight-light mb-5">
                                                     Main Screen for Validation
                                                 </p>
                                             </div>
                                             <div align="center" class="col-md-2">
-                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/startscreen.jpg" alt="Update Photo" />
+                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/mainscreen_prop.jpg" alt="Main Page" />
+                                                <p class="text-muted font-weight-light mb-5">
+                                                    Main Screen with properties
+                                                </p>
+                                            </div>
+                                            <div align="center" class="col-md-2">
+                                                <img class="image-doc" style="max-width: 90%" src="assets/img/design/accept.jpg" alt="Accept Photo" />
                                                 <p class="text-muted font-weight-light mb-5">
                                                     Phot Accept Screen
                                                 </p>
@@ -222,6 +223,56 @@
                                         </div>
                                     </div>
                                 </div>
+                                <br>
+                                <h3 class="text-uppercase">Live Detection</h3>
+                                <h4 class="text-uppercase">The Three Steps</h4>
+                                <div class="container">
+                                    <div class="row">
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/design/step1.jpg" alt="Home Page" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Winking
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/design/step2.jpg" alt="Home Page" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Rotating the head
+                                            </p>
+                                        </div>
+                                        <div align="center" class="col-md-4">
+                                            <img class="image-doc" style="max-width: 90%" src="assets/img/design/step3.jpg" alt="Home Page" />
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Smiling
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <h4 class="text-uppercase">Algorithm</h4>
+                                <p class="text-muted font-weight-light mb-5">
+                                    The Live Detection algorithm is used when a user chooses
+                                    to take a new photo in the main screen or the register screen.
+                                    The camera option will take the user to an interface, based
+                                    on a project done by <a href="https://osamaqarem.com/blog/intro-to-liveness-detection-with-react-native">Osama Qarem</a>, 
+                                    where he has to put his face inside a frame and do some verification steps, like
+                                    winking an eye.
+                                </p>
+                                <p class="text-muted font-weight-light mb-5">
+                                    We use an expo package called <a href="https://docs.expo.dev/versions/latest/sdk/facedetector/">FaceDetector</a> which
+                                    uses functions of <a href="https://developers.google.com/vision">Google Mobile Vision framework</a> to
+                                    detect the faces on images and gives an array that contains
+                                    information about the face, e.g. the coordinates of the center
+                                    of the nose, the winking probability, etc.. The FaceDetector
+                                    package is usually used along with the <a href="https://docs.expo.dev/versions/latest/sdk/camera/">Camera</a> package also
+                                    from expo, where we can define the properties of the
+                                    FaceDetector detection, as for example the minimum detection
+                                    interval, which defines in what space of time it should return a
+                                    new array of the properties of the face. By analysing that array,
+                                    we can confirm if the user is smiling or not, by checking the
+                                    value of the key 'smilingProbability', if the number is bigger,
+                                    it means that the user is most likely smiling.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -581,25 +632,202 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <ul class="text-muted font-weight-light mb-5">
-                                                <li>Face Detection</li>
-                                                <li>Cropping</li>
-                                                <li>Brightness</li>
-                                                <li>Open Eyes</li>
-                                                <li>Face Recognition</li>
-                                                <li>Focus / Gaze</li>
-                                            </ul>
+                                            <h4 class="text-uppercase">Face Detection</h4>
                                         </div>
                                         <div class="col-md-6">
-                                            <ul class="text-muted font-weight-light mb-5">
-                                                <li>Glasses</li>
-                                                <li>Hats</li>
-                                                <li>Head Position</li>
-                                                <li>Image Quality</li>
-                                                <li>Sunglasses</li>
-                                            </ul>
+                                            <h4 class="text-uppercase">Face Recognition</h4>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div align="center" class="col-md-6">
+                                            <img class="image-doc" src="assets/img/plugins/detected_face.png" alt="faceDetection" width="45%"/>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/FaceRecognition/tests/images/GoncaloOldFoto.jpg" alt="face recognition 1" />
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/FaceRecognition/tests/images/GoncaloNoGlasses.jpg" alt="face recognition 2" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns a shape
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns true or false, will return true
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Sunglasses Detection</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Glasses Detection</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/Sunglasses/tests/images/sunglasses_7.jpg" alt="sunglasses 1" />
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/Sunglasses/tests/images/bright_mini_1.jpg" alt="sunglasses 2" width="68%"/>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/Glasses/test/images/Glasses_1.jpg" alt="glasses 1" />
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/EyesOpen/tests/images/Open_eyes_3.jpg" alt="glasses 2" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns true or false, will return true to the left and true to the right 
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns true or false, will return true to the left and true to the right   
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Focus/ Gaze</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Image Quality</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/Gaze/tests/images/Gaze_1.jpg" alt="gaze 1" />
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/Gaze/tests/images/Gaze_4.jpg" alt="gaze 2"/>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/ImageQuality/tests/images/Pedro.jpg" alt="img quality 1" />
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/ImageQuality/tests/images/GoncaloOldFoto.jpg" alt="img quality 2" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns bewteen 50 and 100, the higher the better
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns value above 0, the lower the better   
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Head Position</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Hat Detection</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/HeadPose/tests/images/head_pose1.jpg" alt="head pose 1" />
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/HeadPose/tests/images/head_pose2.jpg" alt="head pose 2"/>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/Hats/tests/images/hat_person_6.jpg" alt="hats 1" />
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/ImageQuality/tests/images/GoncaloOldFoto.jpg" alt="hats 2" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns values above 0, the lower the better
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns true or false, will return true to the left and true to the right 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Brightness</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Open Eyes</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/Brightness/tests/images/bright_Pedro_1.jpg" alt="brightness 1" width="68%"/>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/Brightness/tests/images/bright_vicente_6.jpg" alt="brightness 2"/>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/EyesOpen/tests/images/Open_eyes_3.jpg" alt="openeyes 1" />
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/EyesOpen/tests/images/Open_eyes_7.jpg" alt="openeyes 2" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns value above 0, the higher the better
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns values between 0.10 and 0.50, the higher the better
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 class="text-uppercase">Cropping</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/vicente_before_cropped.png" alt="cropped 1" width="68%"/>
+                                        </div>
+                                        <div align="center" class="col-md-3">
+                                            <img class="image-doc" src="assets/img/plugins/cropped_image.png" alt="cropped 2"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="text-muted font-weight-light mb-5">
+                                                Returns a cropped image
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
                                 </div>
                             </div>
                         </div>
